@@ -1,4 +1,4 @@
-# pbp_flutter_lab
+# counter_7
 
 A new Flutter project.
 

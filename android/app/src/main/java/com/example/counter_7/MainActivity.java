@@ -1,4 +1,4 @@
-package com.example.pbp_flutter_lab;
+package com.example.counter_7;
 
 import io.flutter.embedding.android.FlutterActivity;
 

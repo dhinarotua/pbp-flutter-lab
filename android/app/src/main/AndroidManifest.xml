@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pbp_flutter_lab">
+    package="com.example.counter_7">
    <application
-        android:label="pbp_flutter_lab"
+        android:label="counter_7"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
