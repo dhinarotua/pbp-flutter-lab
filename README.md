@@ -7,7 +7,7 @@ Stateless widget merupakan widget yang isinya fix (tetap), sedangkan stateful wi
 
 Perbedaan stateless widget dengan statefull widget:
 * Stateless widget: Tidak memiliki state, tidak berubah selama program berjalan, dan hanya memiliki properti `final`
-* Stateful widget: Memiliki state dan dapat berubah selama program berjalan oleh internal state.
+* Stateful widget: Memiliki state dan dapat berubah selama program berjalan oleh internal state
 
 ### Widget yang Digunakan
 * FloatingActionButton: Sebagai tombol untuk melakukan increment/decrement pada counter
@@ -21,7 +21,7 @@ Perbedaan stateless widget dengan statefull widget:
 `setState()` berfungsi untuk memberi tahu widget bahwa terdapat perubahan state pada objek sehingga widget akan di-_build_ ulang. Pada aplikasi ini, variable yang terdampak adalah `_counter`.
 
 ### Perbedaan `const` dengan `final`
-Perbedaan antara `const` dengan `final` adalah `const` membuat variable bersifat konstan dan nilainya harus sudah diinisialisasi, sedangkan `final` membuat variable tidak harus memiliki nilai saat dikompilasi karena nilainya baru didapatkan saat kompilasi dijalankan.
+Perbedaan antara `const` dengan `final` adalah `const` membuat variable bersifat konstan dan nilainya harus sudah diinisialisasi saat dikompilasi, sedangkan `final` membuat variable tidak harus memiliki nilai saat dikompilasi karena nilainya baru didapatkan saat kompilasi dijalankan.
 
 ### Penjelasan Implementasi
 1. Membuat flutter project bernama counter_7.
