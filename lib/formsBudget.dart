@@ -18,6 +18,7 @@ class _MyFormPageState extends State<MyFormPage> {
   int _nominal = 0;
   String? jenis;
   List<String> listJenis = ['Pemasukan', 'Pengeluaran'];
+  DateTime date = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -106,20 +107,46 @@ class _MyFormPageState extends State<MyFormPage> {
                   Padding(
                     // Menggunakan padding sebesar 8 pixels
                     padding: const EdgeInsets.all(8.0),
-                    child: DropdownButton(
-                      value: jenis,
-                      icon: const Icon(Icons.arrow_drop_down),
-                      hint: new Text("Pilih Jenis"),
-                      items: listJenis.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: DropdownButton(
+                        value: jenis,
+                        icon: const Icon(Icons.arrow_drop_down),
+                        hint: new Text("Pilih Jenis"),
+                        items: listJenis.map((String items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(items),
+                          );
+                        }).toList(),
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            jenis = newValue ?? "";
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    // Menggunakan padding sebesar 8 pixels
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: const Icon(Icons.calendar_month_outlined),
+                      title: Text("${date.day}/${date.month}/${date.year}"),
+                      onTap: () async {
+                        DateTime? newDate = await showDatePicker(
+                          context: context,
+                          initialDate: date,
+                          firstDate: DateTime(2000), // Batas bawah tahun
+                          lastDate: DateTime(2023), // Batas atas tahun
                         );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          jenis = newValue ?? "";
-                        });
+
+                        // Jika user memilih suatu date (tidak cancel)
+                        if (newDate != null) {
+                          setState(() {
+                            date = newDate;
+                          });
+                        }
                       },
                     ),
                   ),
