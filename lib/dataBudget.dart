@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'drawer.dart';
 import 'main.dart';
 import 'formsBudget.dart';
 import 'models.dart';
@@ -18,43 +19,7 @@ class _MyDataPageState extends State<MyDataPage> {
         title: Text('Data Budget'),
       ),
       // Menambahkan drawer menu
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Menambahkan clickable menu
-            ListTile(
-              title: const Text('Counter'),
-              onTap: () {
-                // Route menu ke halaman utama
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Tambah Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyFormPage()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Data Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyDataPage()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: const DrawerBar(),
       body: Center(
         child: Container(
           margin: const EdgeInsets.all(8),

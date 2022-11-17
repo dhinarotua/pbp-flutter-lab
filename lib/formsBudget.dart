@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'main.dart';
 import 'dataBudget.dart';
 import 'models.dart';
+import 'drawer.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -24,43 +25,7 @@ class _MyFormPageState extends State<MyFormPage> {
         appBar: AppBar(
           title: Text('Form Budget'),
         ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              // Menambahkan clickable menu
-              ListTile(
-                title: const Text('Counter'),
-                onTap: () {
-                  // Route menu ke halaman utama
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('Tambah Budget'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyFormPage()),
-                  );
-                },
-              ),
-              ListTile(
-                title: const Text('Data Budget'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyDataPage()),
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
+        drawer: const DrawerBar(),
         body: Form(
           key: _formKey,
           child: SingleChildScrollView(
