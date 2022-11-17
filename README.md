@@ -51,10 +51,10 @@ Pada tugas ini, beberapa widget yang baru saya gunakan adalah:
 * onPressed: Dipanggil saat user menekan suatu widget (umumnya button)
 
 ### Cara Kerja Navigator Mengganti Halaman
-Cara kerja navigator dalam mengganti halaman diibaratkan dengan _stack_. Ketika kita membuka suatu halaman, halaman tersebut akan di-push ke stack (posisinya berada di top of stack) dan halaman sebelumnya menjadi berada di bawah top of stack. Jika kembali ke halaman sebelumnya, maka halaman saat ini akan di-pop dari stack dan halaman sebelumnya menjadi top of stack. Namun, pada _pushReplacement_, halaman saat ini akan digantikan dengan halaman selanjutnya (di-remove dari stack) sehingga tidak dapat kembali ke halaman sebelumnya.
+Cara kerja navigator dalam mengganti halaman diibaratkan dengan _stack_. Ketika kita membuka suatu halaman, halaman tersebut akan di-push ke stack (posisinya berada di top of stack) dan posisi halaman sebelumnya menjadi di bawah top of stack. Jika kembali ke halaman sebelumnya, maka halaman saat ini akan di-pop dari stack dan halaman sebelumnya menjadi top of stack. Namun, pada _pushReplacement_, halaman saat ini akan digantikan dengan halaman selanjutnya (di-remove dari stack) sehingga tidak dapat kembali ke halaman sebelumnya.
 
 ### Penjelasan Implementasi
 1. Membuat widget drawer pada navbar untuk mengakses menu Counter, Tambah Budget, dan Data Budget.
-2. Membuat file baru bernama `formsBudget.dart` yang merupakan halaman form untuk memproses tambah budget. Setiap budget yang ditambahkan akan menjadi suatu object dan disimpan dalam list.
+2. Membuat file baru bernama `formsBudget.dart` yang merupakan halaman form untuk memproses tambah budget. Setiap budget yang ditambahkan akan disimpan dalam list.
 3. Membuat file baru bernama `dataBudget.dart` yang merupakan halaman untuk menampilkan budget-budget yang ditambahkan.
 4. Membuat file baru bernama `models.dart` sebagai konfigurasi object budget sehingga data budget dapat tersimpan saat ditambahkan dan dapat diakses oleh halaman Data Budget untuk ditampilkan.
