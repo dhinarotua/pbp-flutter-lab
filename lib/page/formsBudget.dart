@@ -170,7 +170,7 @@ class _MyFormPageState extends State<MyFormPage> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
-                          Model.add(judul: _judul, nominal: _nominal, jenis: jenis);
+                          Model.add(judul: _judul, nominal: _nominal, jenis: jenis, date: "${date.day}/${date.month}/${date.year}");
                           showDialog(
                             context: context,
                             builder: (context) {

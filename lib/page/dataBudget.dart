@@ -41,13 +41,25 @@ class _MyDataPageState extends State<MyDataPage> {
 
                     Container(
                       padding: EdgeInsets.all(8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Column(
                         children: [
-                          Text(model.nominal.toString(), style: TextStyle(fontSize: 16),),
-                          Text(model.jenis, style: TextStyle(fontSize: 16),),
-                          ],
-                      ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(model.nominal.toString(), style: TextStyle(fontSize: 16),),
+                              Text(model.jenis, style: TextStyle(fontSize: 16),),
+                            ],
+                          ),
+                          Text(model.date, style: TextStyle(fontSize: 16),),
+                        ],
+              ),
+                      // child: Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: [
+                      //     Text(model.nominal.toString(), style: TextStyle(fontSize: 16),),
+                      //     Text(model.jenis, style: TextStyle(fontSize: 16),),
+                      //     ],
+                      // ),
                     ),
                   ],
                 ),
