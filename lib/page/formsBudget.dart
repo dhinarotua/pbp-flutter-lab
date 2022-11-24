@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'main.dart';
-import 'dataBudget.dart';
-import 'models.dart';
+import '../model/models.dart';
+import 'package:counter_7/model/models.dart';
+// import 'main.dart';
+// import 'page/dataBudget.dart';
+// import 'models.dart';
 import 'drawer.dart';
+// import 'page/drawer.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -130,24 +133,27 @@ class _MyFormPageState extends State<MyFormPage> {
                   Padding(
                     // Menggunakan padding sebesar 8 pixels
                     padding: const EdgeInsets.all(8.0),
-                    child: ListTile(
-                      leading: const Icon(Icons.calendar_month_outlined),
-                      title: Text("${date.day}/${date.month}/${date.year}"),
-                      onTap: () async {
-                        DateTime? newDate = await showDatePicker(
-                          context: context,
-                          initialDate: date,
-                          firstDate: DateTime(2000), // Batas bawah tahun
-                          lastDate: DateTime(2023), // Batas atas tahun
-                        );
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: ListTile(
+                        leading: const Icon(Icons.calendar_month_outlined),
+                        title: Text("${date.day}/${date.month}/${date.year}"),
+                        onTap: () async {
+                          DateTime? newDate = await showDatePicker(
+                            context: context,
+                            initialDate: date,
+                            firstDate: DateTime(2000), // Batas bawah tahun
+                            lastDate: DateTime(2023), // Batas atas tahun
+                          );
 
-                        // Jika user memilih suatu date (tidak cancel)
-                        if (newDate != null) {
-                          setState(() {
-                            date = newDate;
-                          });
-                        }
-                      },
+                          // Jika user memilih suatu date (tidak cancel)
+                          if (newDate != null) {
+                            setState(() {
+                              date = newDate;
+                            });
+                          }
+                        },
+                      ),
                     ),
                   ),
                   Container(

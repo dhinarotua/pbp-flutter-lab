@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import '../main.dart';
 import 'dataBudget.dart';
 import 'formsBudget.dart';
+import 'mywatchlist.dart';
 
 class DrawerBar extends StatelessWidget {
   const DrawerBar({Key? key}) : super(key: key);
@@ -39,6 +40,15 @@ class DrawerBar extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const MyDataPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watch List'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const MyWatchList()),
               );
             },
           ),
