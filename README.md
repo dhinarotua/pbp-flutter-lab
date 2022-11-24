@@ -58,3 +58,31 @@ Cara kerja navigator dalam mengganti halaman diibaratkan dengan _stack_. Ketika 
 2. Membuat file baru bernama `formsBudget.dart` yang merupakan halaman form untuk memproses tambah budget. Setiap budget yang ditambahkan akan disimpan dalam list.
 3. Membuat file baru bernama `dataBudget.dart` yang merupakan halaman untuk menampilkan budget-budget yang ditambahkan.
 4. Membuat file baru bernama `models.dart` sebagai konfigurasi object budget sehingga data budget dapat tersimpan saat ditambahkan dan dapat diakses oleh halaman Data Budget untuk ditampilkan.
+
+-----
+
+## README Tugas 9
+
+### Pengambilan Data JSON
+Kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Namun, hal tersebut tidak lebih baik daripada membuat model sebelum melakukan pengambilan data JSON. Hal ini karena model membuat data yang ada menjadi lebih terstruktur.
+
+### Widget yang Digunakan
+Pada tugas ini, beberapa widget yang baru saya gunakan adalah:
+* Checkbox: Widget untuk menentukan pilihan (ceklis/tidak)
+* BoxDecoration: Untuk mendesign box
+
+### Mekanisme Pengambilan Data dari JSON
+1. Menambahkan dependency `http`
+2. Membuat model sesuai dengan respons dari data
+3. Fetching data
+4. Mengkonversikan objek dari web service ke model
+5. Menampilkan data dengan FutureBuilder
+
+### Penjelasan Implementasi
+1. Membuat model watchlist.
+2. Membuat page watchlist dan fetching data dari JSON Watch List Heroku.
+3. Menambahkan tombol navigasi ke Watch List pada drawer.
+4. Me-_load_ data dari JSON watch list agar bisa ditampilkan di page My Watch List.
+5. Membuat navigasi setiap watchlist ke detailnya.
+6. Membuat page detail yang merupakan detail film tersebut.
+7. Menambahkan tombol back yang akan kembali ke page My Watch List.
