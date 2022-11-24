@@ -3,6 +3,7 @@ import 'package:counter_7/page/drawer.dart';
 import 'package:counter_7/model/model_watchlist.dart';
 import 'mywatchlistDetail.dart';
 import 'package:counter_7/fetchMyWatchlist.dart';
+import 'mywatchlistDetail.dart';
 
 class MyWatchList extends StatefulWidget {
   const MyWatchList({super.key});
@@ -78,6 +79,16 @@ class _MyWatchListState extends State<MyWatchList> {
                                       )
                                     },
                                   ),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WatchlistDetail(
+                                                  watchList:
+                                                  snapshot.data![index])),
+                                    );
+                                  },
                                 )
                             )
                       )
